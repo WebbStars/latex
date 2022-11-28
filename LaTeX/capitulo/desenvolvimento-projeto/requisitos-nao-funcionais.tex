@@ -1,0 +1,41 @@
+\subsubsection{Requisitos Não Funcionais}
+Com o propósito de especificar as características que o sistema deve conter, define-se os \gls{requisitos-nao-funcionais} que não estão associadas as funcionalidades específicas, sendo que algumas delas não estão perceptíveis para qualquer usuário. 
+
+Aspecto de desempenho da aplicação mediante aos critérios de requisitos mínimos que foram provisionados para o seu funcionamento devendo ser previamente mensurável, a disponibilidade de acesso ao conteúdo das informações da aplicação, quais conteúdos cada usuário pode acessar, portabilidade por meio de fatores do sistema ser adaptável a mudanças, outro fator é a usabilidade da qual o sistema utiliza métodos de controle de acesso, apresentação, estética da interface do usuário, operação e proteção contra erros.
+
+Os requisitos funcionais foram mensurados pela equipe do projeto, o qual buscou enfatizar os controles técnicos visando mitigar riscos relacionados à segurança e garantir escalabilidade e usabilidade, sendo definidos no \autoref{requisitos-nao-funcionais}.
+    
+    \begin{enumerate}
+        \begin{quadro}[H]
+        \centering\footnotesize
+        \footnotesize
+        \caption{Requisitos Não Funcionais}
+        \label{requisitos-nao-funcionais}
+            \begin{tabular}{|p{0.15\linewidth} | p{0.15\linewidth} | p{0.15\linewidth} | p{0.35\linewidth} |}  \hline
+            \multicolumn{1}{|c|}{\textbf{Código do Requisito}} &
+              \multicolumn{1}{c|}{\textbf{Módulo}} &
+              \multicolumn{1}{c|}{\textbf{Nome}} &
+              \multicolumn{1}{c|}{\textbf{Descrição}} \\ \hline
+            REQNF01 &
+              Usabilidade &
+              Usabilidade Sistêmica &
+              A aplicação deve conter uma interface desenvolvida para atender a utilização do usuário de forma responsiva \\ \hline
+            REQNF02 &
+              Performance &
+              Escalabilidade de Armazenamento &
+              A aplicação deve ser escalável com propósito de suportar aumento e redução de capacidade de armazenamento de dados de acordo com a demanda \\ \hline
+            REQNF03 &
+              Disponibilidade & Disponibilidade de Dados &
+              O provedor dos recursos de hospedagem deve garantir disponibilidade mínima de 95\% ao mês \\ \hline
+            REQNF04 &
+              Segurança &
+              Protocolo de Segurança de dados &
+              A aplicação deve conter controle de criptografia TLS ou SSL.  \\ \hline
+            REQNF05 &
+              Logs &
+              Armazenamento de logs &
+              A aplicação deve conter logs de transações. \\ \hline
+            \end{tabular}
+        \fonte{Autores}
+        \end{quadro}
+    \end{enumerate}

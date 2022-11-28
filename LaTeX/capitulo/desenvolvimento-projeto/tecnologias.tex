@@ -1,0 +1,14 @@
+\graphicspath{./anexos}
+\section{Tecnologias utilizadas}
+
+\subsection{Front-end}
+
+Se fez necessário a criação de um cliente SPA (single-page application), com a biblioteca \ac{React}, visando um menor consumo de recursos do \ac{back-end} e maior dinamismo na experiência de usuário, para além do aproveitamento de código, graças aos componentes que podem ser criados por meio dela. Acrescenta-se o uso do \ac{TypeScript}, objetivando a prevenção de erros de tipagem. A estilização se deu graças ao framework \ac{Tailwind CSS}, que fornece classes \ac{css} combinadas para customização de elementos \ac{html}.
+
+\subsection{Back-end}
+O framework web \ac{Python Django} fora associado ao \ac{Django REST Framework} para abarcar as regras de negócio, a criação de testes unitários, o \ac{orm}, a migração do banco de dados e fornecimento da \ac{api}. O banco de dados relacional utilizado é o \ac{MySQL}.
+
+O \ac{Nginx} é usado como proxy reverso, a fim de controlar quais portas e arquivos são disponibilizadas publicamente. 
+
+\subsection{Versionamento, integração contínua e deployment}
+O versionamento foi realizado por via da ferramenta \ac{GIT}, e da plataforma de hospedagem \ac{GitHub}, seguindo o fluxo de trabalho \ac{GitHub Flow}. Através do \ac{GitHub Actions}, foi feita a execução da integração contínua e montagem (build) da imagem \ac{Docker} da aplicação \ac {Python} a ser carregada e executada no ambiente da \ac{aws}, além dos arquivos estáticos.

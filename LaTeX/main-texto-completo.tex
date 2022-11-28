@@ -1,0 +1,236 @@
+%% Adaptado a partir de :
+%%    abtex2-modelo-trabalho-academico.tex, v-1.9.2 laurocesar
+%% para ser um modelo para os trabalhos no IFSP-SPO
+
+\documentclass[
+    % -- opções da classe memoir --
+    12pt,               % tamanho da fonte
+    openright,          % capítulos começam em pág ímpar (insere página vazia caso preciso)
+    %twoside,            % para impressão em verso e anverso. Oposto a oneside
+    oneside,
+    a4paper,            % tamanho do papel. 
+    % -- opções da classe abntex2 --
+    %chapter=TITLE,     % títulos de capítulos convertidos em letras maiúsculas
+    %section=TITLE,     % títulos de seções convertidos em letras maiúsculas
+    %subsection=TITLE,  % títulos de subseções convertidos em letras maiúsculas
+    %subsubsection=TITLE,% títulos de subsubseções convertidos em letras maiúsculas
+    % Opções que não devem ser utilizadas na versão final do documento
+    %draft,              % para compilar mais rápido, remover na versão final
+    MODELO,             % indica que é um documento modelo então precisa dos geradores de texto
+    %TODO,               % indica que deve apresentar lista de pendencias 
+    % -- opções do pacote babel --
+    english,            % idioma adicional para hifenização
+    brazil,              % o último idioma é o principal do documento
+    pstricks,border=12pt
+   ]{ifsp-spo-inf-ctds}
+\graphicspath{./anexos}
+% ---
+
+% --- 
+% CONFIGURAÇÕES DE PACOTES
+% --- 
+%\usepackage{etoolbox}
+%\patchcmd{\thebibliography}{\chapter*}{\section*}{}{}
+\usepackage{makecell}
+\usepackage{rotating}
+\usepackage{lscape}
+\usepackage{float}
+\usepackage{qrcode}
+\usepackage{url}
+\usepackage{quoting}
+
+% ---
+% Informações de dados para CAPA e FOLHA DE ROSTO
+% ---
+\titulo{PLATAFORMA INTERCÂMBIO AU PAIR - AUPAMATCH}
+
+% Trabalho individual
+%\autor{JOSÉ BRAZ DE ARAÚJO}
+
+% Trabalho em Equipe
+% ver também https://github.com/abntex/abntex2/wiki/FAQ#como-adicionar-mais-de-um-autor-ao-meu-projeto
+\renewcommand{\imprimirautor}{
+\begin{tabular}{lr}
+CEZAR GODOY NASCIMENTO	& SP3040755 \\
+HENRIQUE OLIVEIRA DE SOUZA & SP3060292 \\
+ISABELA SOUZA DUARTE	& SP3030083 \\
+JOÃO LUCAS FRANCO FERRAZ LORENA & SP3013529 \\
+JONAS ARELLARO CAETANO	& SP3041204 \\
+RAFAEL RIBEIRO SANTOS DE CARVALHO	& SP3024008 \\
+STEFANY RODRIGUES DOS SANTOS	& SP303027X \\
+\end{tabular}
+}
+
+\tipotrabalho{Projeto da Disciplina PI1A5}
+
+\disciplina{PI1A5 - Projeto Integrado I}
+
+\preambulo{Trabalho apresentado no curso de Tecnologia em Análise e Desenvolvimento de Sistemas do Instituto Federal de Educação, Ciência e Tecnologia de São Paulo como requisito parcial para a conclusão da disciplina de Projeto Integrado 1.}
+
+\data{\the\year}
+
+% Definir o que for necessário e comentar o que não for necessário
+% Utilizar o Nome Completo, abntex tem orientador e coorientador
+% então vão ser utilizados na definição de professor
+\renewcommand{\orientadorname}{Professor:}
+\orientador{JOSÉ BRAZ DE ARAÚJO}
+\renewcommand{\coorientadorname}{Professor:}
+\coorientador{ANTÔNIO AIRTON PALLADINO}
+
+% ---
+
+% Configurações de aparência do PDF final
+
+% informações do PDF
+\makeatletter
+    \hypersetup{
+            %pagebackref=true,
+            pdftitle={\@title}, 
+            pdfauthor={\@author},
+            pdfsubject={\imprimirpreambulo},
+            pdfcreator={LaTeX with abnTeX2},
+            pdfkeywords={abnt}{latex}{abntex}{abntex2}{trabalho acadêmico}, 
+            colorlinks=true,            % false: boxed links; true: colored links
+            linkcolor=blue,             % color of internal links
+            citecolor=blue,             % color of links to bibliography
+            filecolor=magenta,              % color of file links
+            urlcolor=blue,
+            bookmarksdepth=4
+    }
+% --- 
+
+% ---
+
+% ----
+% Início do documento
+% ----
+
+\begin{document}
+
+    % ---
+    % Capa
+    % ---
+    \imprimircapa
+
+    % Retira espaço extra obsoleto entre as frases.
+    \frenchspacing 
+    
+    \pretextual
+    
+    % ---
+    % Folha de rosto
+    % (o * indica que haverá a ficha bibliográfica)
+    % ---
+    \imprimirfolhaderosto
+    %\imprimirfolhaderosto*
+    % ---
+    
+    % Quando registrado na biblioteca
+    %\input{pre-fichacatalografica}
+    
+    %Caso necessário
+    %\input{pre-errata}
+    
+    %Obrigatório para trabalhos com bancas oficiais
+    %\input{pre-aprovacao}
+    
+    % ---- opcionais 
+    \input{pre-dedicatoria}
+    %\input{pre-agradecimentos}
+    %\input{pre-epigrafe}
+    
+    % -- resumo obrigatório
+    %\input{pre-resumos}
+    
+    % ---
+    % inserir lista de ilustrações
+    % ---
+    \pdfbookmark[0]{\listfigurename}{lof}
+    \listoffigures*
+    \cleardoublepage
+    % ---
+    
+    % ---
+    % inserir lista de tabelas
+    % ---
+    \pdfbookmark[0]{\listtablename}{lot}
+    \listoftables*
+    \cleardoublepage
+    % ---
+    
+    % ---
+    % inserir lista de quadros
+    % ---
+    \pdfbookmark[0]{\listofquadrosname}{loq}
+    \listofquadros*
+    \cleardoublepage
+    % ---
+    \input{pre-siglas}
+    %\input{defs-siglas}
+
+    % ---
+    % inserir o sumario
+    % ---
+    \pdfbookmark[0]{\contentsname}{toc}
+    \tableofcontents*
+    \cleardoublepage
+    % ---
+    
+    % ----------------------------------------------------------
+    % ELEMENTOS TEXTUAIS
+    % ----------------------------------------------------------
+    \textual
+    
+    \chapter{Introdução}
+    \input{capitulo/introducao/introdução}
+    \input{capitulo/introducao/objetivos}
+    \input{capitulo/introducao/justificativa}
+    \input{capitulo/introducao/analise-comparativa}
+    
+    \chapter{Revisão da Literatura}
+    \input{capitulo/revisao-literatura/revisao-literatura}
+
+    \chapter{Metodologia de Gestão e Desenvolvimento
+    do Projeto}
+    \input{capitulo/gestao-projeto/gestao-projeto}
+    
+    \chapter{Desenvolvimento do Projeto}
+    \input{capitulo/desenvolvimento-projeto/introducao}
+    \input{capitulo/desenvolvimento-projeto/arquitetura}
+    \input{capitulo/desenvolvimento-projeto/requisitos-funcionais}
+    \input{capitulo/desenvolvimento-projeto/requisitos-nao-funcionais}
+    \input{capitulo/desenvolvimento-projeto/historias-de-usuario}
+    \input{capitulo/desenvolvimento-projeto/modelagem}
+    \input{capitulo/desenvolvimento-projeto/fase-entrega}
+    \input{capitulo/desenvolvimento-projeto/seguranca-privacidade}
+    \input{capitulo/desenvolvimento-projeto/seguranca-dados}
+    \input{capitulo/desenvolvimento-projeto/seguranca-testes.tex}
+    \input{capitulo/desenvolvimento-projeto/Seguranca-logs.tex}
+    \input{capitulo/desenvolvimento-projeto/tecnologias}
+    \input{capitulo/desenvolvimento-projeto/modelo-negocio}
+    \input{capitulo/desenvolvimento-projeto/viabilidade-financeira}
+    \input{capitulo/desenvolvimento-projeto/custo-projeto}
+    \input{capitulo/desenvolvimento-projeto/custo-operacional}
+    \input{capitulo/desenvolvimento-projeto/precos-servicos}
+    \input{capitulo/desenvolvimento-projeto/faturamento-projetado}
+    \input{capitulo/desenvolvimento-projeto/roi}
+   
+    \chapter{Links do Projeto}
+    \input{capitulo/qrcode}
+    
+    \bibliography{referencias,capitulo/abntex2-doc-abnt-6023}
+    
+    %%% INCLUIR QUANDO NECESSÁRIO OU NO FINAL DO TRABALHO %%%
+    \input{pos-glossario.tex}
+    %\input{pos-apendices}
+    %\input{pos-anexos}
+    
+    
+    %---------------------------------------------------------------------
+    % INDICE REMISSIVO - Quando necessário 
+    % As palavras indexadas devem ser definidas com \index{} no texto
+    %---------------------------------------------------------------------
+    \phantompart
+
+    %---------------------------------------------------------------------
+\end{document}

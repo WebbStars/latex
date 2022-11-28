@@ -1,0 +1,60 @@
+\section{Funcionalidades}
+As funcionalidades de um sistema são o início para a estruturação do projeto. Conforme o \autoref{funcionalidades-descricoes}, são apresentado as funcionalidades da plataforma e suas descrições.
+
+\begin{quadro}[H]
+	\centering\footnotesize
+	\caption{Funcionalidades e Descrições}
+	    \label{funcionalidades-descricoes}
+	   \resizebox {1 \textwidth }{!}{
+            \begin{tabular}{|l|p{8cm}|}
+            \hline
+            \thead{Funcionalidade} & \thead{Descrição} \\ \hline
+            Cadastro de usuário & Todos os usuários devem se cadastrar com e-mail e senha e devem definir um perfil (Au pair, família ou agência).        
+            \\ \hline
+            Publicador de vaga para au pair & agência ou família podem publicar uma vaga para inscrição de au Pair.      
+            \\ \hline
+            Filtro de busca de vagas e perfis & O filtro de busca tem a finalidade de buscar as informações que os usuários estão procurando.
+            \\ \hline
+            Agenda para disponibilidade de trabalho & Au pair podem informar sua disponibilidade para trabalho por meio de agenda.
+            \\ \hline
+            Alerta de visualização de perfil & Agência, família e au pair recebem alertas de visualização de perfil por e-mail.
+              \\ \hline
+            Consolidado de vagas & au pairs recebem e-mail de consolidado de novas vagas publicadas dos últimos 7 dias.  
+            \\ \hline
+            Exibição de visitas de vagas &  É exibido o número total de visitas à vaga publicada.
+            \\ \hline
+            Entrar em contato com au pair e família & Au pair e família possuem opção de entrar em contato por meio de caixa de mensagem que ao preencher deve enviar um e-mail para o próprietario do perfil.
+            \\ \hline
+            Salvar vagas em favoritos & Permite salvar o perfil visualizado em favoritos.     
+            \\ \hline 
+            Avaliação de au pair, famílias e agências & Deve ser gerado um score para um au pair, família e agência que receberam uma avaliação por nota, os melhores avaliados ganham destaque nos filtros de busca de perfis.
+            \\ \hline
+            \end{tabular}
+        }
+\fonte{Autores}
+\end{quadro}
+O \autoref{funcionalidades-usuarios} exibe cada funcionalidade para determinado perfil. Os perfis da plataforma são os perfis família, au pair e agência.
+
+\begin{quadro}[H]
+	\centering\footnotesize
+        \caption{Funcionalidades e Perfis}
+        \label{funcionalidades-usuarios}
+            \begin{tabular}{|l|c|c|c|}
+                \hline
+                \thead{Funcionalidade}                      & \thead{Família} & \thead{Au pair} & \thead{Agência} \\ \hline
+                Cadastro de usuário                                    & x       & x       & x       \\ \hline
+                Filtro de busca de vagas e perfis                                        & x       & x       & x       \\ \hline
+                Agenda para disponibilidade de trabalho                             & x       & x       & x       \\ \hline
+                Alerta de visualização de perfil                          & x       & x       & x       \\ \hline
+                Consolidado de vagas                                 & x       & x       & x       \\ \hline
+                Exibição de visitas de vagas                      & x       &        & x       \\ \hline
+                Entrar em contato com au pair e família                           & x       & x       & x       \\ \hline
+                Salvar vagas favoritos                      &        & x       &       \\ \hline
+                Avaliação do perfil   & x       & x       & x       \\ \hline
+                Apresentação das melhores vagas avaliadas   &        & x       &        \\ \hline
+                Apresentação das melhores vagas avaliadas   &        & x       &        \\ \hline
+                Avaliação de vagas de famílias e au pairs   & x       & x       & x       \\ \hline
+                Publicador de vaga para au pair                         & x       &        & x       \\ \hline
+            \end{tabular}
+\fonte{Autores}
+\end{quadro}
