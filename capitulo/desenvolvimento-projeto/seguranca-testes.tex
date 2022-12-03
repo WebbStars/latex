@@ -1,0 +1,33 @@
+\section{Testes de Segurança}
+
+Os testes de segurança devem ser realizados durante todo o ciclo do desenvolvimento do sistemas, os quais são fundamentais para validação dos requisitos de implementação de controles de segurança, portanto realizar testes desde a concepção do projeto em ambiente de desenvolvimento, homologação e produção do sistema, visa garantir a disponibilidade, integridade e confidencialidade das informações.
+
+A WebbStars utiliza em seu projeto testes baseados no relatório da \gls{OWASP} versão 2021, o qual busca divulgar os maiores tipos e vetores de ataques e suas vulnerabilidades nas aplicações.
+
+\begin{enumerate}
+    \begin{quadro}[H]
+    \footnotesize
+    \caption{Lista OWASP 2021}
+    \label{requisitos-funcionais}
+        \begin{tabular}{|p{0.04\linewidth} | p{0.40\linewidth} | p{0.50\linewidth} |}  \hline
+          \multicolumn{1}{|c|}{\textbf{ID}} &
+          \multicolumn{1}{c|}{\textbf{Risco}} &
+          \multicolumn{1}{c|}{\textbf{Descrição}}  \\ \hline
+    A01& Broken Access Control & O atacante pode escalar privilégios, o que pode levar a descoberta de novas vulnerabilidades.  \\ \hline
+    A02 & Cryptographic Failures & O atacante pode acessar ou modificar informações confidenciais. Ex.: cartões de crédito, registros de saúde, dados financeiros (seus ou dos seus clientes).   \\ \hline
+    A03 & Injection & É possível roubar a sessão de um usuário, obter dados sensíveis, reescrever a página web, controlar o navegador, redirecionar o usuário para sites de \gls{phishing} ou \gls{malware}.  \\ \hline 
+    A04 & Insecure Design & Um design seguro pode ter problemas de implementação que levam a 
+    vulnerabilidades que podem ser exploradas, mas um design inseguro não pode ser 
+    corrigido por uma implementação perfeita.   \\ \hline
+    A05 & Security Misconfiguration & O atacante pode explorar processadores \gls{XML} vulneráveis se puderem fazer upload de XML ou incluir conteúdo hostil em um documento XML, explorando código vulnerável, dependências ou integrações  \\ \hline
+    A06 & Vulnerable and Outdated Components & O atacante pode explorar vulnerabilidades contidas em dependências de recursos e bibliotecas. \\ \hline
+    A07 & Identification and Authentication Failures & Muitas aplicações acabam falhando no processo de confirmação da identidade do usuário, bem como em processos de autorização, expondo vulnerabilidades e dados de usuários.
+\\ \hline
+    A08 & Software and Data Integrity Failures & O atacante pode  modificar dados vulneráveis a desserialização insegura.  \\ \hline
+    A09 & Security Logging and Monitoring Failures & Registros, detecção, monitoramento e resposta ativa insuficientes podem ocorrer quando. Ex.: Eventos auditáveis, como logins, logins com falha e transações de alto valor não são registrados. \\ \hline
+    A10 & Server-Side Request Forgery  & O atacante pode forçar a aplicação a realizar requisições para um domínio arbitrário, permitindo interagir com o servidor e obter informações sensíveis, ocorre porque muitas vezes aplicações buscam recursos remotos sem validar o \gls{URL} fornecido pelo usuário. \\ \hline
+        \end{tabular}
+    \fonte{Autores}
+    \end{quadro}
+\end{enumerate}
+

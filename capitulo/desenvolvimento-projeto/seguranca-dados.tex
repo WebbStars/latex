@@ -1,0 +1,26 @@
+\subsection{Segurança dos Dados}
+
+Para a camada de segurança dos dados o sistema AupaMatch deve no mínimo possuir criptografia para dados em transito sendo \gls{TLS} ou \gls{SSL} 3.0 utilizando o protocolo \gls{HTTPS}.
+
+O método \gls{HTTP} Post deve ser utilizado para a transferência de qualquer dado confidencial, e não deve ser utilizado o \gls{Cross-Origin Resource Sharing (CORS)} no sistema.
+
+A aplicação não deve permitir que um usuário não administrador realize a visualização ou modificação de contas de outros usuários.
+
+Deve ser utilizado o bit seguro com a bandeira \gls{HTTP Only} para os \gls{cookies} que contiverem dados sensíveis e confidenciais.
+
+Deve ser utilizado o princípio do privilégio mínimo de acesso e o gerenciamento de usuário pelo administrador da aplicação, sendo inseridos campos com o mínimo de coleta de dados pessoais referente às finalidades e necessidades do negócio.
+
+Devem ser instalados somente os recursos necessários dos \gls{frameworks} de desenvolvimento.
+A aplicação deve possuir banco de dados que permita anonimização ou psedoanonimados dos dados pessoais.
+
+Deve ser realizado o gerenciamento dos riscos relacionados a implementação da aplicação.
+
+Qualquer vulnerabilidade identificada no código ou interface da aplicação devem ser corrigidas durante as etapas de desenvolvimento, homologação e produção.
+
+O ambiente deve ser segregado em níveis de desenvolvimento, homologação, pré produção e produção.
+
+Os dados pessoais e dados confidenciais não devem ser processados e armazenados em ambientes de desenvolvimento, homologação e pré-produção.
+
+Todos os softwares utilizados para o desenvolvimento, homologação e produção devem estar licenciados ou atendendo aos requisitos de utilização do software.
+
+Para garantir a proteção contra-ataques de \gls{cross site scripting (XSS)} deve ser realizado a validação de entrada do tipo \gls{whitelist} e codificado todas as informações fornecidas pelo usuário.
